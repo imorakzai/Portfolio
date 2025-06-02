@@ -34,7 +34,6 @@ app.use(express.static(path.join(__dirname, '/client/build')))
 
 //routes
 app.use('/api/v1/portfolio', require('./Routes/portfolioRoute'))
-// app.use("/api/v1/portfolio", portfolioRouter);
 
 app.get('*', function (req, res) {
     res.sendFile(path.join(__dirname, '/client/build/index.html'));
